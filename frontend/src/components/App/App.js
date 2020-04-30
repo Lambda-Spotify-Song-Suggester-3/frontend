@@ -1,15 +1,18 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 
-import NavBar from "../../components/NavBar/NavBar";
+import NavBar from "../../components/NavBar/NavBar.js";
 import LoginPage from "../../pages/LoginPage/LoginPage.js";
-import SignUpPage from "../../pages/Registration/SignUpPage";
+import SignUpPage from "../../pages/Registration/SignUpPage.js";
 
-// import "./App.css";
+// import img from "../../assets/DeepTunes-background.jpg";
+
+import AppStyles from "./AppStyles.jsx";
 import PrivateRoute from "../PrivateRoute/PrivateRoute.js";
 import UserHomePage from "../../pages/UserHomePage/UserHomePage.js";
 import HomePage from "../../pages/HomePage.js";
 import Preference from "../Preference/Preference.js";
+import AddNewSongs from "../../pages/AddNewSongs/AddNewSongs.js"
 
 import AccountPage from "../../pages/AccountPage/AccountPage";
 
@@ -31,10 +34,12 @@ function App() {
           <NavBar />
           <SignUpPage />
         </Route>
-        <PrivateRoute path="/usersonglist">
+
+        <PrivateRoute path="/userhomepage">
           <NavBar />
           <UserHomePage />
         </PrivateRoute>
+
         <PrivateRoute path="/preference">
           <NavBar />
           <Preference />
